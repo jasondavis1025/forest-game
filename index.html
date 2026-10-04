@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grove Light</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='18' rx='8' ry='10' fill='%239ee6b8'/%3E%3Cellipse cx='16' cy='8' rx='5' ry='3' fill='%23e7ffb0'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-playing="0">
+  <div id="stage">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="overlay" data-mode="title">
+      <section class="panel" data-screen="title">
+        <p class="eyebrow">a forest spirit</p>
+        <h1>Grove Light</h1>
+        <p class="lede">Leap the mist, bow the beetles, and carry a small light to the shrine.</p>
+        <button id="start" type="button">Enter the grove</button>
+        <ul class="hints">
+          <li><kbd>A</kbd><kbd>D</kbd> move</li>
+          <li><kbd>Space</kbd> jump, twice</li>
+          <li>Land on their heads</li>
+        </ul>
+      </section>
+      <section class="panel" data-screen="over">
+        <p class="eyebrow">the mist closes</p>
+        <h1>Light fades</h1>
+        <p class="lede">The grove keeps what it is given. The path is still there.</p>
+        <button id="retry" type="button">Try again</button>
+      </section>
+      <section class="panel" data-screen="win">
+        <p class="eyebrow">the shrine answers</p>
+        <h1>Grove cleared</h1>
+        <p class="lede">Three paths, one spirit, and the lanterns burn a little brighter.</p>
+        <button id="again" type="button">Play again</button>
+      </section>
+    </div>
+    <div id="touch">
+      <button type="button" data-hold="left" aria-label="Move left">◀</button>
+      <button type="button" data-hold="right" aria-label="Move right">▶</button>
+      <button type="button" data-hold="jump" aria-label="Jump">Jump</button>
+    </div>
+  </div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
